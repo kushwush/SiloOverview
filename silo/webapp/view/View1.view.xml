@@ -1,0 +1,65 @@
+<mvc:View controllerName="com.jec.silo.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <VBox id="silosContainer">
+                <items>
+                    <HBox
+                        id="idSilosHBox"
+                        items="{siloModel>/silos}"
+                    >
+                        <VBox id="_IDGenVBox1">
+                            <Panel id="_IDGenPanel1"
+                                height="300px"
+                                width="100px"
+                                class="siloPanel"
+                            >
+                                <content>
+                                    <VBox id="_IDGenVBox2"
+                                    height="{path: 'siloModel>height', formatter: '.formatHeight'}"
+                                    class="fill"
+                                    alignContent="Center"
+                                    alignItems="Center"
+                                    >
+                                </VBox>
+                                <FlexBox id="_IDGenFlexBox1" height="100%">
+                                    <items>
+                                        <!-- Label = "Height" Text = "{siloModel>height}"-->
+                                        <!-- Label = "Material Name" Text = "{siloModel>materialName}" -->
+                                        <!-- <Label
+                                            design="Bold"
+                                            textAlign="Center"
+                                            text="{siloModel>height}"
+                                        /> -->
+                                        <VBox id="_IDGenVBox3" alignItems="Center" justifyContent="SpaceAround">
+                                            <Label id="_IDGenLabel1"
+                                                design="Bold"
+                                                textAlign="Center"
+                                                text="Height"
+                                            />
+                                            <Text id="_IDGenText1"
+                                                textAlign="Center"
+                                                text="{siloModel>height}"
+                                            />
+                                            <Label id="_IDGenLabel2"
+                                                design="Bold"
+                                                textAlign="Center"
+                                                text="Material"
+                                            />
+                                            <Text id="_IDGenText2"
+                                                textAlign="Center"
+                                                text="{siloModel>materialName}"
+                                            />
+                                        </VBox>
+                                    </items>
+                                </FlexBox>
+                                </content>
+                            </Panel>
+                        </VBox>
+                    </HBox>
+                </items>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

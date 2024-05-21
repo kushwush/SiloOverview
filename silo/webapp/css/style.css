@@ -1,0 +1,43 @@
+/* Enter your custom styles here */
+.siloPanel {
+  /* Default silo color */
+  background-color: grey; 
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px #888888;
+  position: relative;
+  overflow: hidden;
+  /* Add some space between silos */
+  margin-top: 20px;
+  margin: 10px; 
+}
+
+.siloPanel:hover {
+  scale: 1.05;
+  transition: scale 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
+
+.fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Animation on load */
+  transition: height 1s cubic-bezier(.83,1.3,.87,.68); 
+  /* Inner shadow for depth effect */
+  box-shadow: inset 0px -10px 10px -5px rgba(0,0,0,0.3); 
+}
+
+.material-1 .fill {
+  /* gradiant color */
+  background: linear-gradient(0deg, #f9d423, #ff4e50);
+}
+.material-2 .fill {
+  background: linear-gradient(0deg, #f12711, #f5af19);
+}
+
+.sapMHBox {
+  justify-content: space-around;
+  align-items: center; 
+  width: 100%; 
+}
