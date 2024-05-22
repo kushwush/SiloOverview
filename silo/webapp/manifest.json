@@ -24,6 +24,15 @@
           "localUri": "localService/metadata.xml",
           "odataVersion": "2.0"
         }
+      },
+      "ZRAILWAYS_SRV": {
+        "uri": "/sap/opu/odata/sap/ZRAILWAYS_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
       }
     }
   },
@@ -71,6 +80,11 @@
       },
       "": {
         "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      },
+      "ZRAILWAYS_SRV": {
+        "dataSource": "ZRAILWAYS_SRV",
         "preload": true,
         "settings": {}
       }

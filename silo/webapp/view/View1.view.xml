@@ -1,9 +1,9 @@
-<mvc:View controllerName="com.jec.silo.controller.View1"
+<mvc:View xmlns:form="sap.ui.layout.form" controllerName="com.jec.silo.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m" xmlns:core="sap.ui.core">
     <Page id="page" title="{i18n>title}">
         <content>
-            <VBox id="silosContainer">
+            <VBox id="silosContainer" height="50%">
                 <items>
                     <HBox
                         id="idSilosHBox"
@@ -60,6 +60,35 @@
                     </HBox>
                 </items>
             </VBox>
+            <form:SimpleForm 
+                id="simpleForm"
+                editable="true"
+                layout="ColumnLayout"
+                labelSpanL="1.5"
+                labelSpanM="1"
+                emptySpanL="4"
+                emptySpanM="4"
+                columnsL="1"
+                columnsM="1"
+                class="sapUiResponsiveMargin"
+                width="100%"
+                >
+                <form:content>
+                    <Label id="_IDGenLabel3" text="Material ID" />
+                    <ComboBox id="_IDGenComboBox1" items="{siloModel>/silos}"
+                        selectionChange="onMaterialSelectionChange">
+                        <items>
+                            <core:Item id="_IDGenItem1" key="{siloModel>material}" text="{siloModel>material}" />
+                        </items> 
+                    </ComboBox>
+                    <Label id="_IDGenLabel4" text="Material Name" />
+                    <Input id="_IDGenInput2" value="{siloFormModel>/materialName}" liveChange="onMaterialNameLiveChange"/>
+                    <Label id="_IDGenLabel5" text="Height" />
+                    <Input id="_IDGenInput3" value="{siloFormModel>/height}" liveChange="onMaterialHeightLiveChange"/>
+                    <!-- <Label text="Quantity" />
+                    <Input value="{siloModel>/quantity}" />    -->
+                </form:content>
+            </form:SimpleForm>
         </content>
     </Page>
 </mvc:View>
